@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML meta tag</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Hege Refsnes">
+</head>
+<body>
+ 
+<p>All meta information goes in the head section...</p>
+ 
+OUTPUT
+<a href="https://www.sololearn.com/learn/10526/?ref=ap">ref1</a>
+<a href="https://www.sololearn.com/learn/10526/?ref=appp">searchBtn </a>
+<script>
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+
+searchBtn.addEventListener('click', () => {
+  const searchQuery = searchInput.value.trim();
+  if (searchQuery) {
+    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+    window.open(searchUrl, '_blank');
+    searchInput.value = ''; 
+  }
+});
+
+
+const luckyBtn = document.getElementById('luckyBtn');
+const confettiSettings = { spread: 360 };
+
+luckyBtn.addEventListener('click', () => {
+  confetti(confettiSettings);
+});</script>
+All meta information goes in the head section...
+</body>
+</html>
